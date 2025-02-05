@@ -11,10 +11,10 @@ RUN npm install
 COPY . .
 
 # Construir el frontend con Vite
-RUN npm run build
+# RUN npm run build
 
 EXPOSE 5173
 
-# CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "dev", "--", "--host"]
 
 
