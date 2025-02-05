@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || "https://flapp-back.onrender.com/api/cart/";
+const API_URL = import.meta.env.VITE_API_URL || "otra";
 
 export const fetchProducts = async () => {
   try {
