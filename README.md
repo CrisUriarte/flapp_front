@@ -12,10 +12,14 @@ Clonar el Repositorio
 
 ```bash
 git clone https://github.com/CrisUriarte/flapp_front.git
-cd frontend
+cd flapp_front
 
 npm install
+```
+# Crear archivo variables de entorno
+VITE_API_URL = "https://flapp-back.onrender.com/api/cart/"
 
+```bash
 npm run dev
 
 ```
@@ -25,3 +29,7 @@ Proyecto quedara corriendo en http://localhost:5173
 
 docker build -t my-frontend .
 docker run -p 5173:5173 my-frontend
+
+### produccion
+
+https://flapp-front-serv.onrender.com/
