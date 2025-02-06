@@ -1,12 +1,11 @@
 
-## ✅ **README del Frontend**
-# 🎨 Frontend - E-Commerce App
+# Frontend - E-Commerce App
 
 Este es el frontend del e-commerce, construido con React (Vite) y desplegado en Render.com.
 
 ---
 
-## 🚀 Instalación y Ejecución
+## Instalación y Ejecución
 
 Clonar el Repositorio
 
@@ -16,8 +15,6 @@ cd flapp_front
 
 npm install
 ```
-# Crear archivo variables de entorno
-VITE_API_URL = "https://flapp-back.onrender.com/api/cart/"
 
 ```bash
 npm run dev

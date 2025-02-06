@@ -13,6 +13,9 @@ const Home =()=> {
   const navigate = useNavigate();
   const [products, setProducts] = useState([])
 
+  const [isLoading, setIsLoading] = useState(false);
+
+
   useEffect(()=>{
     const getProducts = async ()=>{
       const data = await fetchProducts()
@@ -22,9 +25,12 @@ const Home =()=> {
   }, [])
 
   const handleRandom= async ()=>{
-    const random = await fetchRandomCart()
-    console.log(random)
+    setIsLoading(true)
+    const random = await fetchRandomCart()    
     dispatch({type:"SET_CART", payload:random.body})
+    setIsLoading(false)
+    console.log(random.body)
+
   }
 
     return (
@@ -46,7 +52,7 @@ const Home =()=> {
           <button
             onClick={() => handleRandom()} 
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-            Carrito aleatorio
+              {isLoading ? "Cargando..." : 'Carrito Aleatorio'}
           </button>       
 
         </div>

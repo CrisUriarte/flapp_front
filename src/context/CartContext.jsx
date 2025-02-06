@@ -29,7 +29,9 @@ const cartReducer = (state, action) => {
         return []; 
       case "SET_CART":
         console.log(action.payload)
-        return action.payload;
+        return action.payload.map(product => ({
+          ...product,
+          quantity: 1}))
       default:
         return state;
     }
